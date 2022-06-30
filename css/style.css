@@ -84,9 +84,15 @@
     text-decoration: none;
 }
 
+.navbar ul li a:hover{
+    width: 180px;
+    background-color: white;
+}
+
 /* Buscar */
 
 .buscar {
+    text-decoration: underline;
     grid-area: buscar;
     animation-name: opacidad;
     animation-duration: 1s;
@@ -131,6 +137,7 @@
 /* Trending */
 
 .trending {
+    text-decoration: underline;
     grid-area: trending;
     animation-name: opacidad;
     animation-duration: 1s;
@@ -200,6 +207,7 @@
 }
 
 .noticias {
+    text-decoration: underline;
     animation-name: opacidad;
     animation-duration: 1s;
     text-align: center;
