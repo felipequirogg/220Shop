@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,11 +6,29 @@
 }
 
 .body {
-    background-color: #D1DED2;
+    background-color: #d1ddd2;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #f7f7f7 25%, transparent 25%), linear-gradient(225deg, #f7f7f7 25%, transparent 25%), linear-gradient(45deg, #f7f7f7 25%, transparent 25%), linear-gradient(315deg, #f7f7f7 25%, #d1ddd2 25%);
+    background-position:  33px 0, 33px 0, 0 0, 0 0;
+    background-size: 66px 66px;
+    background-repeat: repeat;
 }
 
-.header {
-    height: 220px;
+.conteiner{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header"
+    "buscar buscar buscar"
+    "botones botones botones"
+    "trending trending trending"
+    "tarjetas tarjetas tarjetas"
+    "noticias noticias noticias"
+    "footer footer footer";
+}
+
+.header{
+    grid-area: "header";
 }
 
 .inicio {
@@ -29,12 +47,12 @@
 }
 
 .imagentitulo {
-    width:200px;
+    width: 200px;
     margin-top: 10px;
 }
 
 .main{
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .subtitulo {
@@ -43,7 +61,8 @@
 
 /* Navbar */
 
-.navbar{
+.navbar {
+    grid-area: nav;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -51,14 +70,16 @@
     border: solid 1px black;
 }
 
-.navbar ul{
+.navbar ul {
     list-style: none;
     display: flex;
 }
-.navbar ul li{
+
+.navbar ul li {
     padding: 30px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     color: black;
     text-decoration: none;
 }
@@ -66,6 +87,7 @@
 /* Buscar */
 
 .buscar {
+    grid-area: buscar;
     animation-name: opacidad;
     animation-duration: 1s;
     display: block;
@@ -75,7 +97,8 @@
 
 /* Compra y venta */
 
-.cgrande{
+.cgrande {
+    grid-area: botones;
     display: grid;
     grid-template-columns: 800px 630px;
     justify-content: center;
@@ -83,12 +106,13 @@
     padding: 40px;
 }
 
-.cgrande a{
+.cgrande a {
     text-decoration: none;
     color: black;
 }
 
-.compras{
+
+.compras {
     border-radius: 50px;
     width: 600px;
     height: 90px;
@@ -100,26 +124,27 @@
     background-image: url(../img/foto.jpg);
 }
 
-.compras h3{
+.compras h3 {
     display: flex;
 }
 
 /* Trending */
 
-    .trending{
-        animation-name: opacidad;
-        animation-duration: 1s;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        padding: 30px;
-        margin: 20px;
-    }
+.trending {
+    grid-area: trending;
+    animation-name: opacidad;
+    animation-duration: 1s;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 30px;
+    margin: 20px;
+}
 
 
 /* Productos */
 
-.tarjeta:hover{
+.tarjeta:hover {
     transform: scale(1.1);
     font-size: 10px;
     width: 230px;
@@ -132,22 +157,22 @@
     background-color: #d9d9d9;
 }
 
-.tarjeta__titulo{
+.tarjeta__titulo {
     text-decoration: none;
     color: black;
 }
 
-.tarjeta__titulo2{
+.tarjeta__titulo2 {
     width: 150px;
     text-decoration: none;
     color: black;
 }
 
-.tarjeta__imagen{
+.tarjeta__imagen {
     max-width: 222px;
 }
 
-.tarjeta1{
+.tarjeta1 {
     font-size: 10px;
     width: 230px;
     display: flex;
@@ -160,7 +185,8 @@
     transition: all 1s;
 }
 
-.tarjetas{
+.tarjetas {
+    grid-area: tarjetas;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -169,7 +195,11 @@
 
 /* Noticias */
 
-.noticias{
+.naticias{
+    grid-area: noticias;
+}
+
+.noticias {
     animation-name: opacidad;
     animation-duration: 1s;
     text-align: center;
@@ -177,12 +207,12 @@
     padding: 70px;
 }
 
-.noticiero{
+.noticiero {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 50% 50%;
 }
 
-.noticia1{
+.noticia1 {
     width: 920px;
     height: 310px;
     padding: 10px;
@@ -190,7 +220,7 @@
     background-color: #d9d9d9;
 }
 
-.imagen__noticia{
+.imagen__noticia {
     padding: 10px;
     max-width: 400px;
     max-height: 400px;
@@ -199,7 +229,7 @@
 
 }
 
-.titulonoticia{
+.titulonoticia {
     align-items: center;
     padding: 5px;
     font-size: 25px;
@@ -207,56 +237,58 @@
     padding: 10px;
 }
 
-.texto__noticia{
+.texto__noticia {
     margin-top: 30px;
     width: 900px;
     height: 200px;
     font-size: 20px;
-    text-align:center;
+    text-align: center;
 }
 
 /* Footer */
 
-.todo{
-    margin: 50px;
+.todo {
+    grid-area: footer;
+    margin: 5px;
     border-top: 1px solid black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.fondoshop{
+.fondoshop {
     align-items: center;
     text-align: center;
     margin-right: 00px;
 }
 
 
-.imagenfooter{
-    padding-top: 10px;
-    align-items: center;
-    align-content: center;
+.imagenfooter {
+    width: 230px;
+    margin-top: 10px;
+    text-align: center;
 }
 
-.formulario{
+.formulario {
     padding-top: 10px;
     max-width: 15cm;
     max-height: 5cm;
 }
 
-.logo{
+.logo {
     align-items: center;
     text-align: center;
     max-width: 1cm;
     max-height: 1cm;
 }
-.logotexto{
+
+.logotexto {
     padding: 5px;
     margin: 5px;
     text-decoration: none;
     color: black;
 }
 
-.redes{
+.redes {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -264,11 +296,12 @@
 }
 
 /* Animacion */
-@keyframes opacidad{
-    0%{
+@keyframes opacidad {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
@@ -276,8 +309,8 @@
 
 /* Paginas de producto */
 
-.medio{
-    border: 1px solid  black;
+.medio {
+    border: 1px solid black;
     margin-top: 50px;
     object-fit: contain;
     color: white;
@@ -292,7 +325,7 @@
     align-items: center;
 }
 
-.btn{
+.btn {
     text-align: center;
     text-decoration: none;
     color: white;
@@ -303,7 +336,7 @@
 }
 
 
-.sneaker{
+.sneaker {
     background-color: #d9d9d9;
     height: 535px;
     padding: 10px;
@@ -311,7 +344,7 @@
     width: 730px;
 }
 
-.sneaker2{
+.sneaker2 {
     background-color: #d9d9d9;
     height: 535px;
     padding: 10px;
@@ -320,43 +353,43 @@
     font-size: 15px;
 }
 
-.edit__imagen{
+.edit__imagen {
     width: 700px;
 }
 
-.precios{
+.precios {
     font-size: 20px;
     background-color: #bdf3c1;
     width: 220px;
     margin: 10px;
     padding: 10px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 }
 
-.preciosmen{
+.preciosmen {
     font-size: 20px;
     background-color: #bdf3c1;
     width: 220px;
     margin: 10px;
     padding: 10px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 }
 
-.cajas{
+.cajas {
     margin: 50px;
     display: flex;
     justify-content: space-around;
 }
 
-.main__main{
+.main__main {
     display: flex;
     align-items: center;
 
 }
 
-.input2{
+.input2 {
     border-radius: 10px;
     width: 500px;
     height: 305px;
@@ -366,372 +399,372 @@
 
 /* Media Mobile */
 
-@media (max-width: 567px){
-    .imagentitulo{
+@media (max-width: 567px) {
+    .imagentitulo {
         width: 200px;
     }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-}
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
 
-.navbar ul{
-    margin: 150px;
+    .navbar ul {
+        margin: 150px;
 
-}
+    }
 
-.buscar{
-    margin: 20px;
-}
+    .buscar {
+        margin: 20px;
+    }
 
-.cgrande{
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.compras{
-    width: 350px;
-}
-
-.trending{
-    padding: 0%;
-}
-
-.tarjetas{
-    gap: 20px;
-}
-
-.tarjeta{
-    margin: 0%;
-    padding: 0%;
-    max-width: 130px;
-}
-
-.tarjeta__titulo2{
-    width: 100px;
-}
-
-.tarjeta__imagen{
-    max-width: 100px;
-}
-
-.noticias{
-    padding: 0%;
-    margin-top: 90px;
-}
-
-.noticiero{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.noticia1{
-    max-width: 270px;
-    height: 340px;
-}
-
-.titulo__noticia{
-    max-width: 250px;
-    font-size: 14px;
-}
-
-.imagen__noticia{
-    max-width: 250px;
-    padding: 0%;
-}
-
-.texto__noticia{
-    margin: 0px;
-    max-width: 250px;
-    font-size: 10px;
-}
-
-.todo{
-    display: flex;
-    flex-direction: column;
-}
-
-.redes{
-    gap: 10px;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-}
-
-
-.formulario{
-    padding: 0%;
-    margin: 20px;
-}
-
-/* Productos */
-
-.main__main{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.sneaker{
-    margin: 10px;
-    font-size: 10px;
-    width: 530px;
-    height: 380px;
-}
-
-.sneaker2{
-    margin: 10px;
-    font-size: 10px;
-    width: 520px;
-    height: 380px;
-}
-
-
-.edit__imagen{
-    width: 500px;
-}
-}
-
-/* Media Tablets */
-
-@media (max-width: 768px){
-
-    .cgrande{
+    .cgrande {
         padding: 0px;
         display: flex;
         flex-wrap: wrap;
     }
 
-    .noticias{
+    .compras {
+        width: 350px;
+    }
+
+    .trending {
+        padding: 0%;
+    }
+
+    .tarjetas {
+        gap: 20px;
+    }
+
+    .tarjeta {
+        margin: 0%;
+        padding: 0%;
+        max-width: 130px;
+    }
+
+    .tarjeta__titulo2 {
+        width: 100px;
+    }
+
+    .tarjeta__imagen {
+        max-width: 100px;
+    }
+
+    .noticias {
         padding: 0%;
         margin-top: 90px;
     }
-    
-    .noticiero{
+
+    .noticiero {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .noticia1{
-        max-width: 70px;
+
+    .noticia1 {
+        max-width: 270px;
         height: 340px;
     }
-    
-    .titulo__noticia{
+
+    .titulo__noticia {
         max-width: 250px;
         font-size: 14px;
     }
-    
-    .imagen__noticia{
+
+    .imagen__noticia {
         max-width: 250px;
         padding: 0%;
     }
-    
-    .texto__noticia{
+
+    .texto__noticia {
         margin: 0px;
         max-width: 250px;
         font-size: 10px;
     }
 
-    .main__main{
+    .todo {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .sneaker{
+
+    .redes {
+        gap: 10px;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .formulario {
+        padding: 0%;
+        margin: 20px;
+    }
+
+    /* Productos */
+
+    .main__main {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .sneaker {
         margin: 10px;
         font-size: 10px;
         width: 530px;
         height: 380px;
     }
-    
-    .sneaker2{
+
+    .sneaker2 {
         margin: 10px;
         font-size: 10px;
         width: 520px;
         height: 380px;
     }
-    
-    
-    .edit__imagen{
+
+
+    .edit__imagen {
         width: 500px;
     }
 }
 
-@media (max-width:992px){
+/* Media Tablets */
 
-    .cgrande{
+@media (max-width: 768px) {
+
+    .cgrande {
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .noticias {
+        padding: 0%;
+        margin-top: 90px;
+    }
+
+    .noticiero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noticia1 {
+        max-width: 70px;
+        height: 340px;
+    }
+
+    .titulo__noticia {
+        max-width: 250px;
+        font-size: 14px;
+    }
+
+    .imagen__noticia {
+        max-width: 250px;
+        padding: 0%;
+    }
+
+    .texto__noticia {
+        margin: 0px;
+        max-width: 250px;
+        font-size: 10px;
+    }
+
+    .main__main {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .sneaker {
+        margin: 10px;
+        font-size: 10px;
+        width: 530px;
+        height: 380px;
+    }
+
+    .sneaker2 {
+        margin: 10px;
+        font-size: 10px;
+        width: 520px;
+        height: 380px;
+    }
+
+
+    .edit__imagen {
+        width: 500px;
+    }
+}
+
+@media (max-width:992px) {
+
+    .cgrande {
         padding: 0px;
         display: flex;
         flex-wrap: wrap;
     }
 
 
-        .noticias{
+    .noticias {
         padding: 0%;
         margin-top: 90px;
     }
-    
-    .noticiero{
+
+    .noticiero {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .noticia1{
+
+    .noticia1 {
         max-width: 470px;
         height: 230px;
-        
+
     }
-    
-    .titulo__noticia{
+
+    .titulo__noticia {
         max-width: 400px;
         font-size: 13px;
     }
-    
-    .imagen__noticia{
+
+    .imagen__noticia {
         max-width: 250px;
         padding: 0%;
         align-items: center;
     }
-    
-    .texto__noticia{
+
+    .texto__noticia {
         margin: 0px;
         max-width: 450px;
         font-size: 12px;
     }
 }
 
-@media (max-width:1200px){
-    .cgrande{
+@media (max-width:1200px) {
+    .cgrande {
         padding: 0px;
         display: flex;
         flex-wrap: wrap;
     }
 
-    .noticias{
+    .noticias {
         padding: 0%;
         margin-top: 90px;
     }
-    
-    .noticiero{
+
+    .noticiero {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .noticia1{
+
+    .noticia1 {
         max-width: 670px;
         height: 210px;
-        
+
     }
-    
-    .titulo__noticia{
+
+    .titulo__noticia {
         max-width: 600px;
         font-size: 13px;
     }
-    
-    .imagen__noticia{
+
+    .imagen__noticia {
         max-width: 250px;
         padding: 0%;
         align-items: center;
     }
-    
-    .texto__noticia{
+
+    .texto__noticia {
         max-width: 650px;
         font-size: 12px;
     }
 
-    .main__main{
+    .main__main {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .sneaker{
+
+
+    .sneaker {
         margin: 10px;
         font-size: 10px;
         width: 530px;
         height: 380px;
     }
-    
-    .sneaker2{
+
+    .sneaker2 {
         margin: 10px;
         font-size: 10px;
         width: 520px;
         height: 380px;
     }
-    
-    
-    .edit__imagen{
+
+
+    .edit__imagen {
         width: 500px;
     }
 }
 
-@media (max-width:1400px){
-    .noticias{
+@media (max-width:1400px) {
+    .noticias {
         padding: 0%;
         margin-top: 90px;
     }
-    
-    .noticiero{
+
+    .noticiero {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    .noticia1{
+
+    .noticia1 {
         max-width: 670px;
         height: 210px;
-        
+
     }
-    
-    .titulo__noticia{
+
+    .titulo__noticia {
         max-width: 600px;
         font-size: 13px;
     }
-    
-    .imagen__noticia{
+
+    .imagen__noticia {
         max-width: 250px;
         padding: 0%;
         align-items: center;
     }
-    
-    .texto__noticia{
+
+    .texto__noticia {
         max-width: 650px;
         font-size: 12px;
     }
 
 
-    .main__main{
+    .main__main {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .sneaker{
+
+
+    .sneaker {
         margin: 10px;
         font-size: 10px;
         width: 530px;
         height: 380px;
     }
-    
-    .sneaker2{
+
+    .sneaker2 {
         margin: 10px;
         font-size: 10px;
         width: 520px;
         height: 380px;
     }
-    
-    
-    .edit__imagen{
+
+
+    .edit__imagen {
         width: 500px;
     }
 }
