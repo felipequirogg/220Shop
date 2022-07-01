@@ -1,0 +1,58 @@
+
+.main__main {
+    display: flex;
+    align-items: center;
+}
+.sneaker {
+        background-color: #d9d9d9;
+        height: 535px;
+        padding: 10px;
+        margin: 20px;
+        width: 730px;
+        .edit__imagen {
+            width: 700px;
+        }
+    }
+    .sneaker2 {
+        background-color: #d9d9d9;
+        height: 535px;
+        padding: 10px;
+        margin: 20px;
+        width: 730px;
+        font-size: 15px;
+        .edit__imagen {
+            width: 700px;
+        }
+    }
+
+    .cajas {
+        margin: 50px;
+        display: flex;
+        justify-content: space-around;
+        .precios {
+            font-size: 20px;
+            background-color: #bdf3c1;
+            width: 220px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .preciosmen {
+            font-size: 20px;
+            background-color: #bdf3c1;
+            width: 220px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+.input2 {
+    border-radius: 10px;
+    width: 500px;
+    height: 305px;
+    padding: 7px;
+    margin: 30px
+}
