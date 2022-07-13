@@ -281,9 +281,9 @@
 }
 .naticias .noticiero .noticia1 .imagen__noticia {
   padding: 10px;
-  max-width: 400px;
-  max-height: 400px;
-  float: left;
+  width: 400px;
+  height: 270px;
+  float: right;
   margin-right: 10px;
 }
 .naticias .noticiero .noticia1 .titulonoticia {
@@ -295,10 +295,7 @@
 }
 .naticias .noticiero .noticia1 .texto__noticia {
   margin-top: 30px;
-  width: 900px;
-  height: 200px;
   font-size: 20px;
-  text-align: center;
 }
 
 .todo {
@@ -391,119 +388,94 @@
   .imagentitulo {
     width: 200px;
   }
-
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
   }
-
   .navbar ul {
     margin: 150px;
   }
-
   .buscar {
     margin: 20px;
   }
-
   .cgrande {
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .compras {
     width: 350px;
   }
-
   .trending {
     padding: 0%;
   }
-
   .tarjeta {
     margin: 0%;
     padding: 0%;
     max-width: 130px;
   }
-
   .tarjeta__titulo2 {
     width: 100px;
   }
-
   .tarjeta__imagen {
     max-width: 100px;
   }
-
   .noticias {
     padding: 0%;
     margin-top: 90px;
   }
-
   .noticiero {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
-
   .noticia1 {
-    max-width: 270px;
     height: 340px;
   }
-
   .titulo__noticia {
-    max-width: 250px;
+    width: 500px;
+    text-align: center;
     font-size: 14px;
   }
-
   .imagen__noticia {
-    max-width: 250px;
-    padding: 0%;
+    align-items: center;
+    width: 220px;
   }
-
   .texto__noticia {
-    margin: 0px;
-    max-width: 250px;
-    font-size: 10px;
+    font-size: 14px;
   }
-
   .todo {
     display: flex;
     flex-direction: column;
   }
-
   .redes {
     gap: 10px;
     margin: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .formulario {
     padding: 0%;
     margin: 20px;
   }
-
   /* Productos */
   .main__main {
     display: flex;
     flex-direction: column;
   }
-
   .sneaker {
     margin: 10px;
     font-size: 10px;
     width: 530px;
     height: 380px;
   }
-
   .sneaker2 {
     margin: 10px;
     font-size: 10px;
     width: 520px;
     height: 380px;
   }
-
   .edit__imagen {
     width: 500px;
   }
@@ -512,128 +484,104 @@
   .imagentitulo {
     width: 200px;
   }
-
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
   }
-
   .navbar ul {
     margin: 150px;
   }
-
   .buscar {
     margin: 20px;
   }
-
   .cgrande {
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .compras {
     width: 350px;
   }
-
   .trending {
     padding: 0%;
   }
-
   .tarjetas {
     gap: 20px;
   }
-
   .tarjeta {
     margin: 0%;
     padding: 0%;
     max-width: 130px;
   }
-
   .tarjeta__titulo2 {
     width: 100px;
   }
-
   .tarjeta__imagen {
     max-width: 100px;
   }
-
   .naticias {
     display: flex;
     flex-direction: column;
   }
-
   .noticias {
     padding: 0%;
     margin-top: 90px;
   }
-
   .noticiero {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .noticia1 {
     max-width: 270px;
     height: 340px;
   }
-
   .titulo__noticia {
     max-width: 250px;
     font-size: 14px;
   }
-
   .imagen__noticia {
     max-width: 250px;
     padding: 0%;
   }
-
   .texto__noticia {
     margin: 0px;
     max-width: 250px;
     font-size: 10px;
   }
-
   .todo {
     display: flex;
     flex-direction: column;
   }
-
   .redes {
     gap: 10px;
     margin: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .formulario {
     padding: 0%;
     margin: 20px;
   }
-
   /* Productos */
   .main__main {
     display: flex;
     flex-direction: column;
   }
-
   .sneaker {
     margin: 10px;
     font-size: 10px;
     width: 530px;
     height: 380px;
   }
-
   .sneaker2 {
     margin: 10px;
     font-size: 10px;
     width: 520px;
     height: 380px;
   }
-
   .edit__imagen {
     width: 500px;
   }
@@ -645,58 +593,48 @@
     display: flex;
     flex-wrap: wrap;
   }
-
   .noticias {
     padding: 0%;
     margin-top: 90px;
   }
-
   .noticiero {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .noticia1 {
     max-width: 70px;
     height: 340px;
   }
-
   .titulo__noticia {
     max-width: 250px;
     font-size: 14px;
   }
-
   .imagen__noticia {
     max-width: 250px;
     padding: 0%;
   }
-
   .texto__noticia {
     margin: 0px;
     max-width: 250px;
     font-size: 10px;
   }
-
   .main__main {
     display: flex;
     flex-direction: column;
   }
-
   .sneaker {
     margin: 10px;
     font-size: 10px;
     width: 530px;
     height: 380px;
   }
-
   .sneaker2 {
     margin: 10px;
     font-size: 10px;
     width: 520px;
     height: 380px;
   }
-
   .edit__imagen {
     width: 500px;
   }
@@ -707,34 +645,28 @@
     display: flex;
     flex-wrap: wrap;
   }
-
   .noticias {
     padding: 0%;
     margin-top: 90px;
   }
-
   .noticiero {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .noticia1 {
     max-width: 470px;
     height: 230px;
   }
-
   .titulo__noticia {
     max-width: 400px;
     font-size: 13px;
   }
-
   .imagen__noticia {
     max-width: 250px;
     padding: 0%;
     align-items: center;
   }
-
   .texto__noticia {
     margin: 0px;
     max-width: 450px;
@@ -747,58 +679,48 @@
     display: flex;
     flex-wrap: wrap;
   }
-
   .noticias {
     padding: 0%;
     margin-top: 90px;
   }
-
   .noticiero {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .noticia1 {
     max-width: 670px;
     height: 210px;
   }
-
   .titulo__noticia {
     max-width: 600px;
     font-size: 13px;
   }
-
   .imagen__noticia {
     max-width: 250px;
     padding: 0%;
     align-items: center;
   }
-
   .texto__noticia {
     max-width: 650px;
     font-size: 12px;
   }
-
   .main__main {
     display: flex;
     flex-direction: column;
   }
-
   .sneaker {
     margin: 10px;
     font-size: 10px;
     width: 530px;
     height: 380px;
   }
-
   .sneaker2 {
     margin: 10px;
     font-size: 10px;
     width: 520px;
     height: 380px;
   }
-
   .edit__imagen {
     width: 500px;
   }
@@ -808,53 +730,44 @@
     padding: 0%;
     margin-top: 90px;
   }
-
   .noticiero {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .noticia1 {
     max-width: 670px;
     height: 210px;
   }
-
   .titulo__noticia {
     max-width: 600px;
     font-size: 13px;
   }
-
   .imagen__noticia {
     max-width: 250px;
     padding: 0%;
     align-items: center;
   }
-
   .texto__noticia {
     max-width: 650px;
     font-size: 12px;
   }
-
   .main__main {
     display: flex;
     flex-direction: column;
   }
-
   .sneaker {
     margin: 10px;
     font-size: 10px;
     width: 530px;
     height: 380px;
   }
-
   .sneaker2 {
     margin: 10px;
     font-size: 10px;
     width: 520px;
     height: 380px;
   }
-
   .edit__imagen {
     width: 500px;
   }

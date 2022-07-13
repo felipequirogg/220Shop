@@ -140,19 +140,17 @@
 
     .noticiero {
         @include PropiedadesFlex(flex, row, wrap, space-around, center);
-
         .noticia1 {
             width: 920px;
             height: 310px;
             padding: 10px;
             margin: 15px;
             background-color: #d9d9d9;
-
             .imagen__noticia {
                 padding: 10px;
-                max-width: 400px;
-                max-height: 400px;
-                float: left;
+                width: 400px;
+                height: 270px;
+                float: right;
                 margin-right: 10px;
 
             }
@@ -167,10 +165,7 @@
 
             .texto__noticia {
                 margin-top: 30px;
-                width: 900px;
-                height: 200px;
                 font-size: 20px;
-                text-align: center;
             }
         }
     }
