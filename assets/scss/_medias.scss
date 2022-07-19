@@ -94,6 +94,11 @@
 
 .medio{
     text-align: center;
+
+    .main__main{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 560px){
@@ -102,6 +107,11 @@
     }
 
     .todo__footer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main__main{
         display: flex;
         flex-direction: row;
     }

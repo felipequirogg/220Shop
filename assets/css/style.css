@@ -6,44 +6,26 @@
 }
 
 .main__main {
-  display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .sneaker {
   background-color: #d9d9d9;
-  height: 535px;
   padding: 10px;
-  margin: 20px;
-  width: 730px;
-}
-.sneaker .edit__imagen {
-  width: 700px;
+  margin: 5px;
 }
 
 .sneaker2 {
   background-color: #d9d9d9;
-  height: 535px;
   padding: 10px;
-  margin: 20px;
-  width: 730px;
   font-size: 15px;
 }
-.sneaker2 .edit__imagen {
-  width: 700px;
-}
 
-.cajas {
-  margin: 50px;
-  display: flex;
-  justify-content: space-around;
-}
 .cajas .precios {
   font-size: 20px;
   background-color: #bdf3c1;
-  width: 220px;
   margin: 10px;
-  padding: 10px;
   display: flex;
   justify-content: space-around;
   text-decoration: none;
@@ -52,21 +34,13 @@
 .cajas .preciosmen {
   font-size: 20px;
   background-color: #bdf3c1;
-  width: 220px;
   margin: 10px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
   text-decoration: none;
   color: black;
 }
 
-.input2 {
-  border-radius: 10px;
-  width: 500px;
-  height: 305px;
-  padding: 7px;
-  margin: 30px;
+.titulo2 {
+  font-size: 20px;
 }
 
 .justify-content-start {
@@ -450,12 +424,20 @@
 .medio {
   text-align: center;
 }
+.medio .main__main {
+  display: flex;
+  flex-direction: column;
+}
 
 @media (min-width: 560px) {
   .cgrande {
     display: flex;
   }
   .todo__footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .main__main {
     display: flex;
     flex-direction: row;
   }
